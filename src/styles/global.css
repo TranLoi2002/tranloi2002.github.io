@@ -98,31 +98,81 @@ body {
   width: 100%;
 }
 
-/* mobile menu */
+
+
+/* ================= MOBILE MENU MODERN ================= */
 .menu-btn {
   display: none;
   flex-direction: column;
-  gap: 5px;
+  justify-content: center;
+  gap: 6px;
   cursor: pointer;
+  z-index: 200; /* trên menu */
 }
 
 .menu-btn span {
-  width: 24px;
-  height: 2px;
-  background: white;
+  width: 28px;
+  height: 3px;
+  background: #ffffff;
+  border-radius: 2px;
+  transition: all 0.4s ease;
 }
 
+/* animation 3 gạch thành X khi mở */
+.menu-btn.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-btn.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* menu mobile container */
 .mobile-menu {
-  display: none;
+  position: fixed;
+  top: 70px; /* dưới header */
+  left: 0;
+  right: 0;
+  background: rgba(2, 6, 23, 0.95);
+  backdrop-filter: blur(20px);
+  display: flex;
   flex-direction: column;
   text-align: center;
-  background: #020617;
-  padding: 20px;
-  gap: 16px;
+  padding: 40px 20px;
+  gap: 24px;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 150;
 }
 
 .mobile-menu.active {
-  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* mobile menu links */
+.mobile-menu a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  color: #ffffff;
+  transform: translateX(4px);
 }
 
 /* ================= HERO ================= */
@@ -293,11 +343,11 @@ body {
   .nav { display: none; }
   .menu-btn { display: flex; }
 
-  .hero-inner { flex-direction: column; gap: 20px; }
-  .hero-avatar { width: 120px; height: 120px; }
+  .hero-inner { flex-direction: column; gap: 20px;padding: 0 16px;box-sizing: border-box; }
+  .hero-avatar { width: 120px; height: 120px;margin: 0 auto;  }
   .hero-title { font-size: 36px; text-align: center; }
   .hero-subtitle { font-size: 18px; text-align: center; }
-  .hero-info { font-size: 14px; width: 100%; }
+  .hero-info { font-size: 14px; width: 100%;padding: 16px;margin-top: 10px;  box-sizing: border-box; }
 
   .about-simple-title { font-size: 28px; }
   .about-simple-desc { font-size: 16px; padding: 16px; }
