@@ -2,7 +2,9 @@ import { useEffect, useState } from "react";
 
 export function Hero() {
   const roles = [
+    "Software Engineer",
     "Backend Developer",
+    "Frontend Developer",
     "Microservices Engineer",
     "System Designer"
   ];
@@ -25,53 +27,48 @@ export function Hero() {
         }, 1500);
       }
     }, 80);
-
     return () => clearTimeout(timeout);
   }, [char, index]);
 
   // parallax glow
   useEffect(() => {
     const move = (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 30;
-      const y = (e.clientY / window.innerHeight - 0.5) * 30;
-
+      const x = (e.clientX / window.innerWidth - 0.5) * 20;
+      const y = (e.clientY / window.innerHeight - 0.5) * 20;
       document.querySelectorAll(".glow").forEach((g) => {
         g.style.transform = `translate(${x}px, ${y}px)`;
       });
     };
-
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, []);
 
   return (
-    <section className="hero section container">
+    <section className="hero">
+      {/* Glow */}
+      <div className="glow glow1"></div>
+      <div className="glow glow2"></div>
 
-      {/* glow */}
-      <div className="glow glow-1"></div>
-      <div className="glow glow-2"></div>
+      <div className="hero-inner">
+        <div className="hero-avatar">
+          <img src="/avatar.png" alt="Tran Loi" />
+          <div className="avatar-ring"></div>
+        </div>
 
-      {/* avatar */}
-      <div className="hero-avatar">
-        <img src="/avatar.jpg" alt="Tran Loi" />
-        <div className="avatar-ring"></div>
+        <div className="hero-details">
+          <h1 className="hero-title">Tran Van Loi</h1>
+          <p className="hero-subtitle">{text}<span className="cursor">|</span></p>
+
+          <div className="hero-info">
+            <div><strong>DOB:</strong> 09/01/2002</div>
+            <div><strong>Phone:</strong> 0899626775</div>
+            <div><strong>Address:</strong> 162/36 Nguyen Van Luong, Phuong 17, Go Vap, HCM</div>
+            <div><strong>Email:</strong> tranloi09012002@gmail.com</div>
+            <div><strong>Github:</strong> <a href="https://github.com/TranLoi2002" target="_blank">TranLoi2002</a></div>
+            <div><strong>Linkedin:</strong> <a href="https://linkedin.com/in/lợi-trần-247a012" target="_blank">Lợi Trần</a></div>
+          </div>
+        </div>
       </div>
-
-      {/* name */}
-      <h1 className="hero-title">Tran Loi</h1>
-
-      {/* typing */}
-      <p className="hero-subtitle">
-        {text}
-        <span className="cursor">|</span>
-      </p>
-
-      {/* buttons */}
-      <div className="hero-actions">
-        <a href="#projects" className="btn-primary">View Projects</a>
-        <a href="#contact" className="btn-outline">Contact Me</a>
-      </div>
-
     </section>
   );
 }
