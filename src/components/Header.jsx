@@ -58,7 +58,7 @@ export default function Header() {
             <a href="#about" className={active === "about" ? "active" : ""}>About</a>
             <a href="#education" className={active === "education" ? "active" : ""}>Education</a>
             <a href="#skills" className={active === "skills" ? "active" : ""}>Skills</a>
-             <a href="#projects" className={active === "projects" ? "active" : ""}>Projects</a>
+            <a href="#projects" className={active === "projects" ? "active" : ""}>Projects</a>
             <a href="#languages" className={active === "languages" ? "active" : ""}>Languages</a>
             <a href="#achievements" className={active === "achievements" ? "active" : ""}>Achievements</a>
             <a href="#contact" className={active === "contact" ? "active" : ""}>Contact</a>

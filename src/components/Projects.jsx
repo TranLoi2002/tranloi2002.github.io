@@ -7,7 +7,7 @@ export function Projects() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="section container">
+    <section id="projects" className="section container">
       <h2 style={{textAlign:"center", fontSize:"32px"}}>Projects</h2>
 
       <div className="grid">
