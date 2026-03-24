@@ -59,7 +59,7 @@ export default function Header() {
             <a href="#education" className={active === "education" ? "active" : ""}>Education</a>
             <a href="#skills" className={active === "skills" ? "active" : ""}>Skills</a>
             <a href="#projects" className={active === "projects" ? "active" : ""}>Projects</a>
-            <a href="#languages" className={active === "languages" ? "active" : ""}>Languages</a>
+            <a href="#certificates" className={active === "certificates" ? "active" : ""}>Certificates</a>
             <a href="#achievements" className={active === "achievements" ? "active" : ""}>Achievements</a>
             <a href="#contact" className={active === "contact" ? "active" : ""}>Contact</a>
           </nav>
@@ -82,7 +82,7 @@ export default function Header() {
           <a href="#education" onClick={() => setOpen(false)}>Education</a>
           <a href="#skills" onClick={() => setOpen(false)}>Skills</a>
           <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
-          <a href="#languages" onClick={() => setOpen(false)}>Languages</a>
+          <a href="#certificates" onClick={() => setOpen(false)}>Certificates</a>
           <a href="#achievements" onClick={() => setOpen(false)}>Achievements</a>
           <a href="#contact" onClick={() => setOpen(false)}>Contact</a>
         </div>

@@ -1,18 +1,24 @@
 export function ProjectCard({ project, onClick }) {
   return (
-    <div className="card" onClick={() => onClick(project)}>
-      <div style={{overflow:"hidden"}}>
-        <img
-          src={project.image}
-          style={{ width: "100%", height: "200px", objectFit: "cover", transition:"0.4s" }}
-          onMouseOver={e => e.currentTarget.style.transform = "scale(1.1)"}
-          onMouseOut={e => e.currentTarget.style.transform = "scale(1)"}
-        />
+    <div
+      className={`project-card ${project.highlight ? "highlight" : ""}`}
+      onClick={() => onClick(project)}
+    >
+      <div className="project-image">
+        <img src={project.image[0]} alt={project.title} />
+        <div className="overlay">View Details →</div>
       </div>
 
-      <div style={{ padding: "18px" }}>
-        <h3 style={{ marginBottom: "8px" }}>{project.title}</h3>
-        <p style={{ color: "#94a3b8" }}>{project.description}</p>
+      <div className="project-content">
+        <h3>{project.title}</h3>
+        <p className="subtitle">{project.subtitle}</p>
+        <p className="desc">{project.description}</p>
+
+        <div className="tech-list">
+          {project.tech.map((t, i) => (
+            <span key={i}>{t}</span>
+          ))}
+        </div>
       </div>
     </div>
   );

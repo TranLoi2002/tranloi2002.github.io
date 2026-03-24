@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export function Languages() {
+export function Certificates() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section id="languages" className="section languages">
+    <section id="certificates" className="section languages">
       <div className="container">
 
-        <h2 className="languages-title">Languages</h2>
+        <h2 className="languages-title">Certificates</h2>
 
         <div className="languages-card">
 
