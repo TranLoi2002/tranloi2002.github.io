@@ -52,7 +52,12 @@ export default function Header() {
       <header className={`header ${hide ? "hide" : ""}`}>
         <div className="container header-inner">
 
-          <div className="logo">Tran Van Loi</div>
+          <nav>
+            <a href="#hero" className="logo">
+                Tran Van Loi
+            </a>
+          </nav>
+
 
           <nav className="nav">
             <a href="#about" className={active === "about" ? "active" : ""}>About</a>

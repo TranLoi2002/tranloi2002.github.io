@@ -70,6 +70,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  text-decoration: none; 
 }
 
 .nav {
@@ -1086,6 +1087,134 @@ body {
   .nav {
     font-size: 22px;
   }
+}
+/* ===== TECH SECTION ===== */
+.tech-section {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.tech-group {
+  margin-top: 12px;
+}
+
+.tech-group h4 {
+  margin-bottom: 6px;
+  color: #22c55e;
+  font-size: 14px;
+}
+
+/* scroll nếu dài */
+.modal-tech.scroll {
+  max-height: 80px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* scroll đẹp */
+.modal-tech.scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-tech.scroll::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
+}
+/* ===== MODAL SCROLL FULL ===== */
+.project-modal {
+  max-height: 85vh;     /* giới hạn chiều cao modal */
+  overflow-y: auto;     /* bật scroll */
+}
+
+/* scroll đẹp */
+.project-modal::-webkit-scrollbar {
+  width: 6px;
+}
+
+.project-modal::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
+}/* ===== MODAL LAYOUT FIX ===== */
+.project-modal {
+  display: flex;
+  flex-direction: column;
+  max-height: 90vh;
+}
+
+/* slider cố định */
+.slider {
+  flex-shrink: 0;
+}
+
+/* ===== SCROLL CONTENT ===== */
+.modal-content-scroll {
+  overflow-y: auto;
+  margin-top: 10px;
+  padding-right: 6px;
+}
+
+/* scroll đẹp */
+.modal-content-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.modal-content-scroll::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
+}
+
+/* ===== FEATURES ===== */
+.features {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.features h4 {
+  color: #22c55e;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.features ul {
+  padding-left: 18px;
+  color: #94a3b8;
+}
+
+.features li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+/* ===== TECH SECTION ===== */
+.tech-section {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.tech-group {
+  margin-top: 12px;
+}
+
+.tech-group h4 {
+  margin-bottom: 6px;
+  color: #22c55e;
+  font-size: 14px;
+}
+
+/* scroll tech */
+.modal-tech.scroll {
+  max-height: 80px;
+  overflow-y: auto;
+}
+
+/* scroll đẹp */
+.modal-tech.scroll::-webkit-scrollbar {
+  width: 4px;
+}
+
+.modal-tech.scroll::-webkit-scrollbar-thumb {
+  background: #22c55e;
+  border-radius: 10px;
 }
 
 

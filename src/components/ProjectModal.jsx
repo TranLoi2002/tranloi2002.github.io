@@ -35,7 +35,7 @@ export function ProjectModal({ project, onClose }) {
       >
         <button className="close-btn" onClick={onClose}>✕</button>
 
-        {/* ===== SLIDER ===== */}
+        {/* ===== SLIDER (FIXED) ===== */}
         <div
           className="slider"
           onTouchStart={handleTouchStart}
@@ -43,7 +43,6 @@ export function ProjectModal({ project, onClose }) {
         >
           <img src={project.image[index]} className="modal-img" />
 
-          {/* arrows */}
           <button className="slider-btn prev" onClick={prev}>‹</button>
           <button className="slider-btn next" onClick={next}>›</button>
         </div>
@@ -59,15 +58,66 @@ export function ProjectModal({ project, onClose }) {
           ))}
         </div>
 
-        {/* CONTENT */}
-        <h2>{project.title}</h2>
-        <p className="subtitle">{project.subtitle}</p>
-        <p className="detail">{project.detail}</p>
+        {/* ===== SCROLL CONTENT ===== */}
+        <div className="modal-content-scroll">
 
-        <div className="modal-tech">
-          {project.fullTech.map((t, i) => (
-            <span key={i}>{t}</span>
-          ))}
+          <h2>{project.title}</h2>
+          <p className="subtitle">{project.subtitle}</p>
+          <p className="detail">{project.detail}</p>
+
+          {/* ===== TECH ===== */}
+          <div className="tech-section">
+
+            {project.backend && (
+              <div className="tech-group">
+                <h4>⚙️ Backend</h4>
+                <div className="modal-tech scroll">
+                  {project.backend.map((t, i) => (
+                    <span key={i}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {project.frontend && project.frontend.length > 0 && (
+              <div className="tech-group">
+                <h4>🎨 Frontend</h4>
+                <div className="modal-tech scroll">
+                  {project.frontend.map((t, i) => (
+                    <span key={i}>{t}</span>
+                  ))}
+                </div>
+              </div>
+            )}
+
+          </div>
+
+          {/* ===== FEATURES ===== */}
+          {project.features && (
+            <div className="features">
+              <h4>🚀 Features</h4>
+              <ul>
+                {project.features.map((f, i) => (
+                  <li key={i}>{f}</li>
+                ))}
+              </ul>
+            </div>
+          )}
+          <div className="modal-actions">
+            {project.github && project.github !== "#" && (
+              <a href={project.github} target="_blank" rel="noreferrer">
+                💻 GitHub
+              </a>
+            )}
+
+            {project.demo && project.demo !== "#" && (
+              <a href={project.demo} target="_blank" rel="noreferrer">
+                🚀 Demo
+              </a>
+            )}
+          </div>
+
+
         </div>
       </div>
     </div>

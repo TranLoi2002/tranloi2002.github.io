@@ -19,7 +19,21 @@ export function ProjectCard({ project, onClick }) {
             <span key={i}>{t}</span>
           ))}
         </div>
+        <div className="modal-actions">
+            {project.github && project.github !== "#" && (
+              <a href={project.github} target="_blank" rel="noreferrer">
+                💻 GitHub
+              </a>
+            )}
+
+            {project.demo && project.demo !== "#" && (
+              <a href={project.demo} target="_blank" rel="noreferrer">
+                🚀 Demo
+              </a>
+            )}
+          </div>
       </div>
+      
     </div>
   );
 }

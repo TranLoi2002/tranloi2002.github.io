@@ -44,7 +44,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       {/* Glow */}
       <div className="glow glow1"></div>
       <div className="glow glow2"></div>

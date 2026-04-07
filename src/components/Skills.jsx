@@ -29,7 +29,8 @@ export function Skills() {
     },
     {
       title: "Tools",
-      items: ["🔧 Git", "💡 IntelliJ", "📝 VS Code"],
+      items: ["🔧 Git", "💡 IntelliJ", "📝 VS Code","🌘 Eclipse",
+    "📬 Postman"],
       level: 90
     },
     {
@@ -39,13 +40,6 @@ export function Skills() {
     }
   ];
 
-  const chartData = [
-    { skill: "Backend", value: 90 },
-    { skill: "Frontend", value: 75 },
-    { skill: "Database", value: 85 },
-    { skill: "DevOps", value: 70 },
-    { skill: "Design", value: 80 }
-  ];
 
   // animation scroll
   useEffect(() => {
@@ -99,16 +93,6 @@ export function Skills() {
           ))}
         </div>
 
-        {/* RADAR CHART */}
-        <div className="skill-chart fade-up">
-          <ResponsiveContainer width="100%" height={300}>
-            <RadarChart data={chartData}>
-              <PolarGrid />
-              <PolarAngleAxis dataKey="skill" />
-              <Radar dataKey="value" />
-            </RadarChart>
-          </ResponsiveContainer>
-        </div>
 
       </div>
     </section>

@@ -16,7 +16,6 @@ export function Education() {
             <p className="major">Major: SOFTWARE ENGINEERING</p>
 
             <ul>
-              <li>GPA: 2.86 / 4.0</li>
               <li>Graduation Year: 2025</li>
             </ul>
           </div>
